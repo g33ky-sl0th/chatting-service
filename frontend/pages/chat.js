@@ -16,7 +16,7 @@ const Chat = () => {
 
   useEffect(() => {
     fetchMessages();
-    const interval = setInterval(fetchMessages, 5000); // Polling for new messages
+    const interval = setInterval(fetchMessages, 100); // Polling for new messages
     return () => clearInterval(interval);
   }, []);
 
@@ -29,7 +29,7 @@ const Chat = () => {
   };
 
   return (
-    <div>
+    <div style={{display:"flex",justifyContent:"space-between",height:"100vw",overflowY:"hidden"}}>
       <MessageList messages={messages} />
       <MessageInput content={content} setContent={setContent} onSend={handleSendMessage} />
     </div>
