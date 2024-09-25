@@ -7,49 +7,48 @@ The application includes both frontend and backend services to facilitate real-t
 
 ## Architecture -
 ### Client (React App):
-User Interface (UI) components for login, registration, and chat.
-API calls to the backend for data retrieval and updates.
+    User Interface (UI) components for login, registration, and chat.
+    API calls to the backend for data retrieval and updates.
 
 ### Backend (Node.js):
-Authentication Controller: Handles user login and registration.
-Messaging Controller: Manages message storage and retrieval.
-WebSocket Server: Maintains real-time communication channels.
+    Authentication Controller: Handles user login and registration.
+    Messaging Controller: Manages message storage and retrieval.
 
 ### Database (MongoDB):
-users -> Collection: Stores user information.
-messages -> Collection: Stores chat messages.
+    users -> Collection: Stores user information.
+    messages -> Collection: Stores chat messages.
 
 ## Component Design
 ### Frontend Components
-Login Component:
-    Handles user login with username and password.
-    Sends credentials to the backend for authentication.
+    Login Component:
+        - Handles user login with username and password.
+        - Sends credentials to the backend for authentication.
 
-Chat Component:
-    Displays a list of messages.
+    Chat Component:
+        - Displays a list of messages.
 
 ### Backend Components
-Authentication Controller:
-    Register: Creates a new user with hashed password.
-    Login: Authenticates user and returns a JWT token.
+    Authentication Controller:
+        - Register: Creates a new user with hashed password.
+        - Login: Authenticates user and returns a JWT token.
 
-Messaging Controller:
-    Save Messages: Stores messages in the database.
-    Retrieve Messages: Fetches previous messages for the user.
+    Messaging Controller:
+        - Save Messages: Stores messages in the database.
+        - Retrieve Messages: Fetches previous messages for the user.
 
 
 ## Technologies and Libraries Used
 ### Frontend:
-React.js: For building UI components.
-Axios: For making HTTP requests.
+    React.js: For building UI components.
+    Axios: For making HTTP requests.
 
 ### Backend:
-Express.js: For creating RESTful APIs.
-Mongoose: For interacting with MongoDB.
-bcryptjs: For hashing passwords.
-jsonwebtoken: For handling JWT tokens.
-Socket.io: For real-time WebSocket communication.
-CORS: For handling cross-origin resource sharing.
+    Express.js: For creating RESTful APIs.
+    Mongoose: For interacting with MongoDB.
+    bcryptjs: For hashing passwords.
+    jsonwebtoken: For handling JWT tokens.
+    Socket.io: For real-time WebSocket communication.
+    CORS: For handling cross-origin resource sharing.
 
 ### Database:
 MongoDB: For storing user credentials and chat messages.
